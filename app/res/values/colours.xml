@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorswallow">#003473</color>
+    <color name="colorbudgeriagar">#B6E618</color>
+    <color name="colorbeetle">#0058A5</color>
+    <color name="tealbackgroundColor">#D1EBEC</color>
+    <color name="headerColor">#00A9AB</color>
+    <color name="mainBackground">#ffffff</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="Damselfly">#DEE5E5</color>
+    <color name="textColor">#2D313D</color>
+
+    <color name="textColorDarkMode">#ffffff</color>
+
+    <color name="textColorDarkModeHint">#aaa</color>
+</resources>

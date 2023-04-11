@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.rspcaassured.sync.Application.ApplicationSyncAdapter"
+    android:accountType="com.rspcaassured.login"
+    android:userVisible="true"
+    android:supportsUploading="true"
+    android:allowParallelSyncs="true"
+    android:isAlwaysSyncable="true" />

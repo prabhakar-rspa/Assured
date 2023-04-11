@@ -1,0 +1,105 @@
+{
+  "soups": [
+    {
+      "soupName": "applications",
+      "indexes": [
+        { "path": "Id", "type":  "string"},
+        { "path": "Name", "type":  "string"},
+        { "path": "Site__c", "type":  "string"},
+        { "path": "Site_Name__c", "type": "string"},
+        { "path": "Site_Phone__c", "type": "string"},
+        { "path": "Applicant_Phone__c", "type": "string"},
+        { "path": "Membership_Number__c", "type":  "string"},
+        { "path": "Address__c", "type":  "string"},
+        { "path": "Location_Notes__c", "type":  "string"},
+        { "path": "Application_Type__c", "type":  "string"},
+        { "path": "Previous_Assessment_Date__c", "type":  "string"},
+        { "path": "Assessment_Date__c", "type":  "string"},
+        { "path": "Assessment_Deadline__c", "type":  "string"},
+        { "path": "Stage__c", "type":  "string"},
+        { "path": "Renewal_Stage__c", "type":  "string"},
+        { "path": "Checklist_Completion__c", "type": "integer"},
+        { "path": "What3Words__c", "type": "string"},
+        { "path": "Mobile_Sync__c", "type":  "string"},
+        { "path": "Site_Notes__c", "type":  "string"},
+        { "path": "Site_Notes_Update__c", "type":  "string"},
+        { "path": "__local__", "type": "string"},
+        { "path": "__locally_created__", "type": "string"},
+        { "path": "__locally_updated__", "type": "string"},
+        { "path": "__locally_deleted__", "type": "string"},
+        { "path": "__sync_id__", "type": "integer"}
+      ]
+    },
+    {
+      "soupName": "assessments",
+      "indexes": [
+        { "path": "Id", "type":  "string"},
+        { "path": "Name", "type":  "string"},
+        { "path": "Application__c", "type":  "string"},
+        { "path": "Checklist_Type__c", "type": "string"},
+        { "path": "Status__c", "type": "string"},
+        { "path": "Animals__c", "type": "string"},
+        { "path": "Rearing_System__c", "type": "string"},
+        { "path": "Assessment_Completion__c", "type":  "string"},
+        { "path": "Signed_by_Assessor__c", "type":  "string"},
+        { "path": "Member_Signature_String__c", "type":  "string"},
+        { "path": "Assessor_Signature_String__c", "type":  "string"},
+        { "path": "Signed_by_Assessor_Date__c", "type":  "string"},
+        { "path": "Signed_by_Member__c", "type":  "string"},
+        { "path": "Signed_by_Member_Date__c", "type":  "string"},
+        { "path": "__local__", "type": "string"},
+        { "path": "__locally_created__", "type": "string"},
+        { "path": "__locally_updated__", "type": "string"},
+        { "path": "__locally_deleted__", "type": "string"},
+        { "path": "__sync_id__", "type": "integer"}
+      ]
+    },
+    {
+      "soupName": "assessmentQuestions",
+      "indexes": [
+        { "path": "Id", "type":  "string"},
+        { "path": "Name", "type":  "string"},
+        { "path": "Assessment_Checklist__c", "type":  "string"},
+        { "path": "Section__c", "type":  "string"},
+        { "path": "Section_Order__c", "type":  "string"},
+        { "path": "Subsection__c", "type": "string"},
+        { "path": "Subsection_Order__c", "type": "string"},
+        { "path": "Standard__c", "type": "string"},
+        { "path": "Standard_Order__c", "type": "string"},
+        { "path": "Summary__c", "type": "string"},
+        { "path": "Compliant__c", "type":  "string"},
+        { "path": "Comments_Action__c", "type":  "string"},
+        { "path": "Guidance_Notes__c", "type":  "string"},
+        { "path": "Question_Answered__c", "type":  "string"},
+        { "path": "ContentVersion_URL__c", "type":  "string"},
+        { "path": "Evidence_Required__c", "type":  "string"},
+        { "path": "Other_Evidence__c", "type":  "string"},
+        { "path": "Correction__c", "type":  "string"},
+        { "path": "ImageUploadLocal__c", "type":  "string"},
+        { "path": "notesUploadLocal", "type":  "string"},
+        { "path": "__local__", "type": "string"},
+        { "path": "__locally_created__", "type": "string"},
+        { "path": "__locally_updated__", "type": "string"},
+        { "path": "__locally_deleted__", "type": "string"},
+        { "path": "__sync_id__", "type": "integer"}
+      ]
+    },
+    {
+      "soupName": "assessmentChecklistSection",
+      "indexes": [
+        { "path": "Id", "type":  "string"},
+        { "path": "Name", "type":  "string"},
+        { "path": "Assessment__c", "type":  "string"},
+        { "path": "Checklist_Section_Name__c", "type":  "string"},
+        { "path": "Checklist_Section_Order__c", "type":  "string"},
+        { "path": "Checklist_Section_Comments__c", "type": "string"},
+        { "path": "activeSection", "type": "string"},
+        { "path": "__local__", "type": "string"},
+        { "path": "__locally_created__", "type": "string"},
+        { "path": "__locally_updated__", "type": "string"},
+        { "path": "__locally_deleted__", "type": "string"},
+        { "path": "__sync_id__", "type": "integer"}
+      ]
+    }
+  ]
+}

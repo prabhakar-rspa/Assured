@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="remoteAccessConsumerKey">3MVG9fTLmJ60pJ5J5aFLcP8Kj5g9UUHJu70VKN2O5tZqHX1z7viaWHHWBhFpgv4zENWN3V9vykKp9qgeT6ZtL</string>
+    <string name="oauthRedirectURI">https://test.salesforce.com/services/oauth2/success</string>
+    <string-array name="oauthScopes">
+        <item>api</item>
+		<item>web</item>
+    </string-array>
+    <string name="androidPushNotificationClientId"></string>
+</resources>

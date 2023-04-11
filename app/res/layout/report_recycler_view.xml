@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/background_card"
+    android:elevation="2dp"
+    android:padding="5dp">
+
+
+
+
+    <!-- Dummy item to prevent EditText from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Standard Number linear layout-->
+    <LinearLayout
+        android:id="@+id/standardNumberLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- standard number label -->
+        <TextView
+            android:id="@+id/standardText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/agenda_light"
+            android:text="Standard"
+            android:textColor="?attr/textColor"
+            android:textSize="15sp" />
+        <!-- standard number output -->
+        <TextView
+            android:id="@+id/standardInput"
+            android:layout_width="400dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/custom_text_input"
+            android:text="1.1"
+            android:ems="10"
+            android:fontFamily="@font/agenda_light"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="2dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- non compliance linear layout -->
+    <LinearLayout
+        android:id="@+id/nonComplianceLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standardNumberLinearLayout">
+        <!-- non compliance field label -->
+        <TextView
+            android:id="@+id/noncomplianceText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/agenda_light"
+            android:text="Non-Compliance"
+            android:textColor="?attr/textColor"
+            android:textSize="15sp" />
+        <!-- non compliance input -->
+        <EditText
+            android:id="@+id/noncomplianceInput"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autofillHints="Enter non-compliance"
+            android:background="@drawable/custom_text_input"
+            android:ems="10"
+            android:fontFamily="@font/agenda_light"
+            android:hint="Enter non-compliance"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:gravity="top|start"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="2dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- correction linear layout -->
+    <LinearLayout
+        android:id="@+id/correctionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nonComplianceLinearLayout">
+        <!-- correction label -->
+        <TextView
+            android:id="@+id/correctionText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/agenda_light"
+            android:text="Correction"
+            android:textColor="?attr/textColor"
+            android:textSize="15sp" />
+        <!-- correction input -->
+        <EditText
+            android:id="@+id/correctionInput"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autofillHints="Enter correction"
+            android:background="@drawable/custom_text_input"
+            android:ems="10"
+            android:fontFamily="@font/agenda_light"
+            android:hint="Enter correction"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:gravity="top|start"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="2dp"
+            android:textSize="15sp"
+            android:maxLength="255"/>
+    </LinearLayout>
+
+    <!-- Evidence linear layout Horizontal -->
+    <LinearLayout
+        android:id="@+id/evidenceLinearLayoutHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctionLinearLayout">
+        <!-- Evidence fields linear layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp">
+            <!-- Evidence picklist linear layout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Evidence Picklist Label -->
+                <TextView
+                    android:id="@+id/evidenceText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Evidence"
+                    android:textColor="?attr/textColor"
+                    android:textSize="15sp" />
+
+                <!-- Evidence Picklist Input -->
+                <TextView
+                    android:id="@+id/evidenceInputText"
+                    android:layout_width="240dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="Enter evidence"
+                    android:background="@drawable/custom_text_input"
+                    android:ems="10"
+                    android:fontFamily="@font/agenda_light"
+                    android:hint="Enter evidence"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="15sp" />
+                <Spinner
+                    android:id="@+id/evidenceInput"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <!-- Other Evidence linear layout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Other text Label -->
+                <TextView
+                    android:id="@+id/otherFieldLabel"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Other"
+                    android:textColor="?attr/textColor"
+                    android:textSize="15sp" />
+
+                <!-- Other text Input -->
+                <EditText
+                    android:id="@+id/otherFieldInput"
+                    android:layout_width="280dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="Enter evidence"
+                    android:background="@drawable/custom_text_input"
+                    android:ems="10"
+                    android:fontFamily="@font/agenda_light"
+                    android:hint="Enter evidence"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="15sp"
+                    android:maxLength="255"/>
+            </LinearLayout>
+
+            <!-- Save Non Compliance Linear Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/saveDoneButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Done"
+                    android:background="?attr/commentsActionButtonDoneColor"
+                    android:textColor="#003473"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Camera Upload Evidence Linear Layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp">
+            <!-- Camera Image Button -->
+            <ImageButton
+                android:id="@+id/cameraButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:srcCompat="@drawable/ic_add_photo" />
+            <!-- Camera Image Preview -->
+            <ImageView
+                android:id="@+id/uploadPhotoImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:background="@drawable/upload_image_view_border" />
+
+        </LinearLayout>
+
+        <!-- Notes Upload Evidence Linear Layout -->
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Notes Image Button -->
+            <ImageButton
+                android:id="@+id/noteButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_add_note" />
+            <!-- Notes Image Preview -->
+            <ImageView
+                android:id="@+id/uploadNoteImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:background="@drawable/upload_image_view_border" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Assessment.AssessmentOverviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/backgroundColor">
+
+        <include layout="@layout/main_toolbar" />
+
+        <!-- Overview card -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/assessCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/background_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/farmAssessmentNameAndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="BlackWater Farm Renewal July 2020"
+                    android:textColor="?attr/headerTextColor"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Row 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="566dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                <TextView
+                    android:id="@+id/memberName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Site Name "
+                    android:textSize="16sp"
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lastAssessmentDate"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Previous Assessment Date "
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/assessmentDate"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Renewal Date"
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/memberNameInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/memberName" />
+
+                <TextView
+                    android:id="@+id/lastAssessmentDateInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textSize="14sp"
+                    android:textColor="?attr/textColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lastAssessmentDate" />
+
+                <TextView
+                    android:id="@+id/assessmentDateInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView TextView TextView TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/assessmentDate"
+                    app:layout_constraintTop_toBottomOf="@+id/assessmentDate" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Divider 1 -->
+            <ImageView
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#1f252c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="566dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                app:layout_constraintHorizontal_bias="0.68"
+                app:layout_constraintStart_toStartOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+
+                <TextView
+                    android:id="@+id/what3WordsInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/editWhat3Words"
+                    app:layout_constraintTop_toBottomOf="@+id/What3Words" />
+
+                <TextView
+                    android:id="@+id/contactNumber"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Contact Number"
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/locationNotes"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Location Notes"
+                    android:textColor="?attr/headerTextColor"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/contactNumber"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/What3Words"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="55dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="What3Words"
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/editWhat3Words"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:background="@android:color/transparent"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintStart_toEndOf="@+id/What3Words"
+                    app:layout_constraintTop_toTopOf="@+id/What3Words"
+                    android:contentDescription="edit what 3 words" />
+
+                <ImageView
+                    android:id="@+id/openWhat3WordsWebsite"
+                    android:src="@drawable/baseline_location_on_24"
+                    android:background="@android:color/transparent"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/editWhat3Words"
+                    app:layout_constraintTop_toTopOf="@+id/editWhat3Words"
+                    android:contentDescription="open what 3 words website"
+                    app:tint="@android:color/holo_green_dark" />
+
+                <TextView
+                    android:id="@+id/contactNumberInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contactNumber" />
+
+                <TextView
+                    android:id="@+id/locationNotesInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/What3Words"
+                    app:layout_constraintStart_toStartOf="@+id/locationNotes"
+                    app:layout_constraintTop_toBottomOf="@+id/locationNotes" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Divider 2 -->
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#1f252c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="566dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2">
+                <TextView
+                    android:id="@+id/address"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Site Address "
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/addressInput"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+                <TextView
+                    android:id="@+id/assessmentDeadline"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Assessment Deadline"
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/assessmentDeadlineInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="52dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="TextView"
+                    android:textColor="?attr/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assessmentDeadline" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Divider 3 -->
+            <ImageView
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#1f252c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/siteNotesSection"
+                android:layout_width="568dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+                <TextView
+                    android:id="@+id/siteNotes"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:text="Site Notes "
+                    android:textColor="?attr/headerTextColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<EditText
+                    android:id="@+id/siteNotesEditText"
+                    android:layout_width="530dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/cardBackgroundColor3"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:textColorHint="?attr/textColor"
+                    android:gravity="top|left"
+                    android:hint="Notes"
+                    android:inputType="text"
+                    android:outlineProvider="none"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:textSize="12sp"
+                    android:textColor="?attr/textColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/siteNotes" />-->
+                <TextView
+                    android:id="@+id/siteNotesEditText"
+                    android:layout_width="530dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/cardBackgroundColor3"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/agenda_light"
+                    android:textColorHint="?attr/textColor"
+                    android:gravity="top|left"
+                    android:outlineProvider="none"
+                    android:paddingStart="10dp"
+                    android:paddingTop="3dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/textColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/siteNotes" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/saveAssessmentOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="8dp"
+                android:text="Save"
+                android:visibility="gone"
+                android:onClick="saveApplication"
+                app:layout_constraintEnd_toStartOf="@+id/cancelSaveAssessment"
+                app:layout_constraintTop_toBottomOf="@+id/siteNotesSection" />
+
+            <Button
+                android:id="@+id/cancelSaveAssessment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                android:text="Cancel"
+                android:visibility="gone"
+                android:onClick="cancelSave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/siteNotesSection" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/assessmentChecklistSectionRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <include layout="@layout/main_nav_drawer" />
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/checklistRow"
+    android:background="?attr/cardBackgroundColor">
+
+    <!-- checklist Standard -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/checklistStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/checklistColumns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Standard"
+                android:textColor="?attr/textColor" />
+
+            <TextView
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:text="Standard Summary"
+                android:textColor="?attr/textColor" />
+
+            <Button
+                android:id="@+id/guidanceNotesButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_baseline_info_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/standardInputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checklistColumns">
+
+            <TextView
+                android:id="@+id/standardNumber"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="C1.1"
+                android:textColor="?attr/textColor" />
+
+            <TextView
+                android:id="@+id/standardSummary"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:text="Chicks must:
+a) be hatched according to the current version of the 'RSPCA Welfare standards for hatcheries'
+b) be sourced from an RSCPA Assured approved hatchery."
+                android:textColor="?attr/textColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/standardYesNoNaRadioToggles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/standardInputs">
+
+
+            <RadioGroup
+                android:id="@+id/standardCompliance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/complianceYes"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_non_compliances_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Yes"
+                    android:textColor="@drawable/radio_non_compliances_text" />
+
+                <RadioButton
+                    android:id="@+id/complianceNo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_non_compliances_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="No"
+                    android:textColor="@drawable/radio_non_compliances_text" />
+
+                <RadioButton
+                    android:id="@+id/complianceNA"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_non_compliances_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="N/A"
+                    android:textColor="@drawable/radio_non_compliances_text" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/nonComplianceTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            app:layout_constraintHorizontal_bias="0.73"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/standardYesNoNaRadioToggles">
+
+            <Button
+                android:id="@+id/commentsActionDoneButton"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/commentsActionButtonDoneColor"
+                android:text="Undo"
+                android:textColor="#003473"
+                android:visibility="invisible" />
+
+            <!-- Dummy item to prevent EditText from receiving focus -->
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+           <!-- android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"-->
+            <EditText
+                android:id="@+id/standardNonComplianceText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/custom_input"
+                android:gravity="top|start"
+                android:hint="Enter comments"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scrollbars="vertical"
+                android:textSize="12sp" />
+
+            <!-- Upload Image -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/addphoto"
+                    android:layout_width="62dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_add_photo"
+                    />
+                <!-- ImageView for upload image -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imgContainer"
+                    android:layout_width="68dp"
+                    android:layout_height="62dp"
+                    android:visibility="invisible"
+                    >
+                    <ImageView
+                        android:id="@+id/uploadPhotoImageView"
+                        app:layout_constraintTop_toTopOf="@+id/imgContainer"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgContainer"
+                        app:layout_constraintStart_toStartOf="@+id/imgContainer"
+                        app:layout_constraintEnd_toEndOf="@+id/imgContainer"
+                        android:layout_width="60dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/upload_image_view_border"
+                        />
+
+                    <ImageView
+                        android:id="@+id/deleteImgButton"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/cancel_icon"
+                        app:layout_constraintTop_toTopOf="@+id/imgContainer"
+                        app:layout_constraintEnd_toEndOf="@+id/imgContainer"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <!-- Upload Notes -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/addNote"
+                    android:layout_width="62dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_add_note"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+                <!-- ImageView for upload notes -->
+                <ImageView
+                    android:id="@+id/uploadNoteImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/upload_image_view_border"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addNote" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

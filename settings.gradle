@@ -1,0 +1,6 @@
+rootProject.name = 'Assured'
+include ':app'
+include ':libs:SalesforceSDK'
+include ':libs:SalesforceAnalytics'
+include ':libs:SmartStore'
+include ':libs:MobileSync'

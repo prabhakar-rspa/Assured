@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Light/Day Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#00A9AB</item>
+        <item name="colorPrimaryDark">#00A9AB</item>
+        <item name="colorAccent">#00A9AB</item>
+        <item name="backgroundColor">#D1EBEC</item>
+        <item name="cardBackgroundColor">#ffffff</item>
+        <item name="cardBackgroundColor2">#ffffff</item>
+        <item name="cardBackgroundColor3">#ffffff</item>
+        <item name="headerBackgroundColor">#00A9AB</item>
+        <item name="headerTextColor">#003473</item>
+        <item name="headerTextColor2">#0058A5</item>
+        <item name="textColor">#2D313D</item>
+        <item name="pbColor">@color/Damselfly</item>
+        <item name="dividerColor">#003473</item>
+        <item name="drawerLayoutProfileIcon">#003473</item>
+        <item name="drawerLayoutProfileIconRing">#335D8F</item>
+        <item name="checklistSectionSpinnerIcon">#0058A5</item>
+        <item name="commentsActionButtonDoneColor">#B6E618</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <!-- Dark/Night Theme -->
+    <style name="darkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0E1217</item>
+        <item name="colorPrimaryDark">#0E1217</item>
+        <item name="colorAccent">#ffffff</item>
+        <item name="backgroundColor">#070A0E</item>
+        <item name="cardBackgroundColor">#19222C</item>
+        <item name="cardBackgroundColor2">#202A34</item>
+        <item name="cardBackgroundColor3">#334352</item>
+        <item name="headerBackgroundColor">#0E1217</item>
+        <item name="headerTextColor">#ffffff</item>
+        <item name="headerTextColor2">#ffffff</item>
+        <item name="textColor">#ffffff</item>
+        <item name="pbColor">#616E7C</item>
+        <item name="dividerColor">#0058A5</item>
+        <item name="drawerLayoutProfileIcon">#ffffff</item>
+        <item name="drawerLayoutProfileIconRing">#ffffff</item>
+        <item name="checklistSectionSpinnerIcon">#ffffff</item>
+        <item name="commentsActionButtonDoneColor">#B6E618</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+   <!-- <style name="etBackground">
+        <item name="android:background">@drawable/custom_input</item>
+    </style>-->
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">#19222C</item>
+    </style>
+</resources>

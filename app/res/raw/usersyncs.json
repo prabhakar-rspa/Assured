@@ -1,0 +1,152 @@
+{
+  "syncs": [
+    {
+      "syncName": "syncDownApplications",
+      "syncType": "syncDown",
+      "soupName": "applications",
+      "target": {
+        "type": "soql",
+        "query": "SELECT Id, Name, Site__c, Site_Name__c, Site_Phone__c, Applicant_Phone__c, Membership_Number__c, Address__c, Location_Notes__c, Application_Type__c, Previous_Assessment_Date__c, Assessment_Date__c, Assessment_Deadline__c, Stage__c, Renewal_Stage__c, Checklist_Completion__c, What3Words__c, Mobile_Sync__c, Site_Notes__c, Site_Notes_Update__c FROM Application__c WHERE Mobile_Sync__c = true LIMIT 10000"
+      },
+      "options": {
+        "mergeMode": "OVERWRITE"
+      }
+    },
+    {
+      "syncName": "syncUpApplications",
+      "syncType": "syncUp",
+      "soupName": "applications",
+      "target": {
+        "createFieldlist": [
+          "Checklist_Completion__c",
+          "Site_Notes_Update__c"
+        ]
+      },
+      "options": {
+        "fieldlist": [
+          "Id",
+          "Checklist_Completion__c",
+          "Site_Notes_Update__c"
+        ],
+        "mergeMode": "LEAVE_IF_CHANGED"
+      }
+    },
+    {
+      "syncName": "syncDownAssessments",
+      "syncType": "syncDown",
+      "soupName": "assessments",
+      "target": {
+        "type": "soql",
+        "query": "SELECT Id, Name, Application__c, Checklist_Type__c, Status__c, Animals__c, Rearing_System__c, Assessment_Completion__c, Signed_by_Assessor__c, Signed_by_Assessor_Date__c, Signed_by_Member__c, Signed_by_Member_Date__c , Member_Signature_String__c , Assessor_Signature_String__c FROM Assessments__c WHERE Application__r.Mobile_Sync__c = true LIMIT 10000"
+      },
+      "options": {
+        "mergeMode": "OVERWRITE"
+      }
+    },
+    {
+      "syncName": "syncUpAssessments",
+      "syncType": "syncUp",
+      "soupName": "assessments",
+      "target": {
+        "createFieldlist": [
+          "Status__c",
+          "Assessment_Completion__c",
+          "Signed_by_Assessor__c",
+          "Signed_by_Assessor_Date__c",
+          "Signed_by_Member__c",
+          "Signed_by_Member_Date__c",
+          "Member_Signature_String__c",
+          "Assessor_Signature_String__c"
+        ]
+      },
+      "options": {
+        "fieldlist": [
+          "Id",
+          "Status__c",
+          "Assessment_Completion__c",
+          "Signed_by_Assessor__c",
+          "Signed_by_Assessor_Date__c",
+          "Signed_by_Member__c",
+          "Signed_by_Member_Date__c",
+          "Member_Signature_String__c",
+          "Assessor_Signature_String__c"
+        ],
+        "mergeMode": "LEAVE_IF_CHANGED"
+      }
+    },
+    {
+      "syncName": "syncDownAssessmentQuestions",
+      "syncType": "syncDown",
+      "soupName": "assessmentQuestions",
+      "target": {
+        "type": "soql",
+        "query": "SELECT Id, Name, Assessment_Checklist__c, Section__c, Section_Order__c, Subsection__c, Subsection_Order__c, Standard__c, Standard_Order__c, Summary__c, Compliant__c, Comments_Action__c, Guidance_Notes__c, Question_Answered__c, ContentVersion_URL__c, Evidence_Required__c, Other_Evidence__c, Correction__c,ImageUploadLocal__c FROM Assessment_Checklist_Question__c WHERE Assessment_Checklist__r.Application__r.Mobile_Sync__c = true ORDER BY Standard_Order__c LIMIT 10000"
+      },
+      "options": {
+        "mergeMode": "OVERWRITE"
+      }
+    },
+    {
+      "syncName": "syncUpAssessmentQuestions",
+      "syncType": "syncUp",
+      "soupName": "assessmentQuestions",
+      "target": {
+        "createFieldlist": [
+          "Compliant__c",
+          "Comments_Action__c",
+          "Guidance_Notes__c",
+          "Question_Answered__c",
+          "ContentVersion_URL__c",
+          "Evidence_Required__c",
+          "Other_Evidence__c",
+          "Correction__c",
+          "ImageUploadLocal__c"
+        ]
+      },
+      "options": {
+        "fieldlist": [
+          "Id",
+          "Compliant__c",
+          "Comments_Action__c",
+          "Guidance_Notes__c",
+          "Question_Answered__c",
+          "ContentVersion_URL__c",
+          "Evidence_Required__c",
+          "Other_Evidence__c",
+          "Correction__c",
+          "ImageUploadLocal__c"
+        ],
+        "mergeMode": "LEAVE_IF_CHANGED"
+      }
+    },
+    {
+      "syncName": "syncDownAssessmentChecklistSection",
+      "syncType": "syncDown",
+      "soupName": "assessmentChecklistSection",
+      "target": {
+        "type": "soql",
+        "query": "SELECT Id, Name, Assessment__c, Checklist_Section_Name__c, Checklist_Section_Order__c, Checklist_Section_Comments__c FROM Assessment_Checklist_Section__c WHERE Assessment__r.Application__r.Mobile_Sync__c = true LIMIT 10000"
+      },
+      "options": {
+        "mergeMode": "OVERWRITE"
+      }
+    },
+    {
+      "syncName": "syncUpAssessmentChecklistSection",
+      "syncType": "syncUp",
+      "soupName": "assessmentChecklistSection",
+      "target": {
+        "createFieldlist": [
+          "Checklist_Section_Comments__c"
+        ]
+      },
+      "options": {
+        "fieldlist": [
+          "Id",
+          "Checklist_Section_Comments__c"
+        ],
+        "mergeMode": "LEAVE_IF_CHANGED"
+      }
+    }
+  ]
+}
