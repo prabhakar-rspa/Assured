@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="evidence_picklist">
+        <item>Invoice</item>
+        <item>Photocopy</item>
+        <item>Photograph</item>
+        <item>Other</item>
+        <item>None required</item>
+    </string-array>
+</resources>
